@@ -15,7 +15,17 @@ verysmoothscroll.js works without any dependancies, however, it uses ES6 along w
 
 Using the polyfills and transpiling to ES5, the script should work on any browser with [CSS transitions](http://caniuse.com/#feat=css-transitions) and [CSS 2D transformation properties](http://caniuse.com/#feat=transforms2d).
 
-A download to a transpiled ES5 version with a `<NodeList>.forEach` polyfill will be provided in the future.
+A download to a transpiled ES5 version with a `<NodeList>.forEach` polyfill will be provided in the future, with the following compatibility:
+
+* IE10+
+* Edge 12+
+* Firefox 16+
+* Chrome 36+
+* Safari 9+
+* Opera 23+
+* iOS Safari 9.2+
+
+Compatibility can be taken even futher with vendor prefixes, such as `-webkit-transition` and `-webkit-translate`, which may will be implemented in the legacy version of verysmoothscroll.js.
 
 # Controlling speed and animation curve
 
