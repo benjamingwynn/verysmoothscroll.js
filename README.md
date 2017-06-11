@@ -8,14 +8,14 @@ verysmoothscroll.js works without any dependancies, however, it uses ES6 along w
 
 # Compatiblity
 
+The source is designed for the following browser:
+
 * Chrome 51+
 * Firefox 50+
 
-*BUT* you can use Babel to transpile the current ES6 code into ES5/older code. You will also need a polyfill for `<NodeList>.forEach`, which is used and is only included in some browsers right now (Ch 51+, FF 50+). [Mozilla have created a polyfill here](https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach#Polyfill). If targeting [<IE9](http://caniuse.com/#feat=addeventlistener), you may also need a polyfill for `document.addEventListener` along with some other features.
+*BUT* a transpiled version of the code, with a `<NodeList>.forEach` polyfill is provided.
 
-Using the polyfills and transpiling to ES5, the script should work on any browser with [CSS transitions](http://caniuse.com/#feat=css-transitions) and [CSS 2D transformation properties](http://caniuse.com/#feat=transforms2d).
-
-A download to a transpiled ES5 version with a `<NodeList>.forEach` polyfill will be provided in the future, with the following compatibility:
+Using the polyfills and transpiling to ES5, the script should work on any browser with [CSS transitions](http://caniuse.com/#feat=css-transitions) and [CSS 2D transformation properties](http://caniuse.com/#feat=transforms2d), including:
 
 * IE10+
 * Edge 12+
@@ -25,7 +25,9 @@ A download to a transpiled ES5 version with a `<NodeList>.forEach` polyfill will
 * Opera 23+
 * iOS Safari 9.2+
 
-Compatibility can be taken even futher with vendor prefixes, such as `-webkit-transition` and `-webkit-translate`, which may will be implemented in the legacy version of verysmoothscroll.js.
+Use ./verysmoothscroll.legacy.js or ./verysmoothscroll.legacy.min.js
+
+Compatibility can be taken even futher with vendor prefixes, such as `-webkit-transition` and `-webkit-translate`, if required. But, if you need to support browsers older than the ones above, this may not be the script for you.
 
 # Controlling speed and animation curve
 
