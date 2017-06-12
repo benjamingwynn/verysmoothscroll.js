@@ -5,7 +5,8 @@
   "main": "verysmoothscroll.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel verysmoothscroll.js --out-file verysmoothscroll.es5.js --presets=env && concat polyfills/*.js verysmoothscroll.es5.js -o verysmoothscroll.legacy.js && uglifyjs --compress --mangle --source-map verysmoothscroll.legacy.js -o verysmoothscroll.legacy.min.js"
+    "lint": "eslint verysmoothscroll.js",
+    "build": "babel verysmoothscroll.js --out-file verysmoothscroll.es5.js --presets=env && concat polyfills/*.js verysmoothscroll.es5.js -o verysmoothscroll.legacy.js"
   },
   "repository": {
     "type": "git",
@@ -16,9 +17,9 @@
     "url": "https://github.com/benjamingwynn/verysmoothscroll.js/issues"
   },
   "devDependencies": {
-    "babel-preset-env": "~1.5.2",
     "babel-cli": "~6.24.1",
+    "babel-preset-env": "~1.5.2",
     "concat": "~1.0.3",
-    "uglifyjs": "~2.4.11"
+    "eslint": "^4.0.0"
   }
 }

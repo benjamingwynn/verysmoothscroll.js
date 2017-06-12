@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: sans-serif;
+				text-align: center;
+				background: whitesmoke;
+				display: flex;
+			}
+
+			body, .floaty {
+				transition-duration: 1s;
+				transition-timing-function: linear;
+			}
+
+			.floaty {
+				position: fixed;
+			}
+
+			body, body * {
+				margin: 0;
+				padding: 0;
+			}
+
+			h1 {
+				padding: 1ex 0;
+			}
+
+			main > * , aside > * {
+				padding: 1em;
+			}
+
+			main {
+				width: 80%;
+			}
+
+			div {
+				height: 100vh;
+			}
+
+			#one {
+				background: #eee;
+			}
+
+			#two {
+				background: #ddd;
+			}
+
+			#three {
+				background: #ccc;
+			}
+
+			#four {
+				background: #bbb;
+			}
+
+			aside {
+				width: 20%;
+			}
+
+			aside .floaty {
+				z-index: 2;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				width: inherit;
+			}
+
+			aside .floaty a {
+				display: block;
+				width: 100%;
+				text-align: right;
+			}
+		</style>
+		<script defer src="./verysmoothscroll.js"></script>
+	</head>
+	<body>
+		<main>
+			<div id="one">
+				<h1>verysmoothscroll.js</h1>
+				<p>This is a sample page demonstating verysmoothscroll.js</p>
+			</div>
+			<div id="two">
+				<h1>verysmoothscroll.js</h1>
+				<p>This is a sample page demonstating verysmoothscroll.js</p>
+			</div>
+			<div id="three">
+				<h1>verysmoothscroll.js</h1>
+				<p>This is a sample page demonstating verysmoothscroll.js</p>
+			</div>
+			<div id="four">
+				<h1>verysmoothscroll.js</h1>
+				<p>This is a sample page demonstating verysmoothscroll.js</p>
+			</div>
+		</main>
+		<aside>
+			<div class="floaty">
+				<a href="#one">One</a>
+				<a href="#two">Two</a>
+				<a href="#three">Three</a>
+				<a href="#four">Four</a>
+			</div>
+		</aside>
+	</body>
+</html>

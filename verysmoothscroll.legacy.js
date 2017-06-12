@@ -45,7 +45,7 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 	    timeout = void 0;
 
 	if (!SCROLL_STOP_ALLOWED) {
-		console.log("Scrolling stopping disabled");
+		console.info("Scrolling stopping disabled");
 	}
 
 	function forEach$a(callback) {
@@ -81,7 +81,7 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 		// animate the scrolling of the page
 		$body.style.transitionProperty = "transform";
 		window.requestAnimationFrame(function () {
-			$body.style.transform = "translateY(-" + (targetY - window.pageYOffset) + "px)";
+			$body.style.transform = "translateY(" + (window.pageYOffset - targetY) + "px)";
 		}
 
 		// after a certain amount of time, actually move the page
@@ -94,8 +94,6 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 	function finishScroll(targetY) {
 		var yPos = targetY ? targetY : -document.body.getBoundingClientRect().top;
 		pageIsScrolling = false;
-
-		console.log(yPos);
 
 		$body.style.transform = "";
 		$body.style.transitionProperty = "none";
